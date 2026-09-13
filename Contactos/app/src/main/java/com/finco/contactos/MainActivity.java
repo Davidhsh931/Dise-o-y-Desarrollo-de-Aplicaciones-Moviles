@@ -14,6 +14,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    //Variables:
+    // 1:
     LinearLayout linearResultados;
     FloatingActionButton floatingActionButton;
 
@@ -35,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void mostrarDialogAgregarContacto() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Agregar Nuevo Contacto");
+        builder.setTitle("Agregar nuevo contacto");
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setPadding(50, 30, 50, 30);
 
         final EditText txtNombre = new EditText(this);
-        txtNombre.setHint("Nombre del Contacto");
+        txtNombre.setHint("Nombre del contacto");
         layout.addView(txtNombre);
 
         final EditText txtTelefono = new EditText(this);
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             String email = txtEmail.getText().toString().trim();
 
             if (nombre.isEmpty() || telefono.isEmpty() || email.isEmpty()) {
-                Toast.makeText(this, "¡Completa todos los campos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Completa todos los campos.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         linearResultados.addView(btnContacto);
 
         contador++;
-        Toast.makeText(this, "¡Contacto guardado!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Contacto guardado.", Toast.LENGTH_SHORT).show();
     }
 
     private void mostrarDialogEditarContacto(Contacto contacto, Button btnContacto) {
@@ -135,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             String nuevoEmail = txtEmail.getText().toString().trim();
 
             if (nuevoNombre.isEmpty() || nuevoTelefono.isEmpty() || nuevoEmail.isEmpty()) {
-                Toast.makeText(this, "¡Completa todos los campos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Completa todos los campos.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
